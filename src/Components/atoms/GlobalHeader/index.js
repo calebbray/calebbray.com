@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import HeaderLink from '../HeaderLink';
+import { routes } from '../../../routes';
+
 const StyledDiv = styled.div`
   height: 4.5rem;
   background: #204354;
@@ -14,19 +17,22 @@ const StyledDiv = styled.div`
 
 const StyledHeaderText = styled.h1`
   font-size: 2rem;
-  z-index: 2;
-`;
-
-const StyledSubText = styled.span`
-  font-size: 1.4rem;
-  z-index: 2;
 `;
 
 function GlobalHeader() {
   return (
     <StyledDiv>
-      <StyledHeaderText>Hey, I'm Caleb</StyledHeaderText>
-      <StyledSubText>Check out what I've been up to...</StyledSubText>
+      <HeaderLink to="/">
+        <StyledHeaderText>Hey, I'm Caleb</StyledHeaderText>
+      </HeaderLink>
+      {routes.map(
+        (route, i) =>
+          route.displayOnMenu && (
+            <HeaderLink key={i} to={route.path}>
+              {route.text}
+            </HeaderLink>
+          )
+      )}
     </StyledDiv>
   );
 }
