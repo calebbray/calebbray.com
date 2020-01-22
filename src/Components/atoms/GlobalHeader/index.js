@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import HeaderLink from '../HeaderLink';
-import { routes } from '../../../routes';
+import HeaderLink from 'Components/atoms/HeaderLink';
+import { routes } from 'routes';
 
 const StyledDiv = styled.div`
   height: 4.5rem;

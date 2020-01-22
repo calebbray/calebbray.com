@@ -2,7 +2,7 @@ import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
 
-import Loader from '../../atoms/Loader';
+import Loader from 'Components/atoms/Loader';
 
 const GET_ALL_POSTS = gql`
   query {

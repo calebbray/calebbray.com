@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import logo from '../../../logo.svg';
+import logo from 'logo.svg';
 
 const StyledImg = styled.img`
   height: ${props => props.loaderSize}rem;
