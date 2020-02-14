@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import WhiteSection from 'Components/atoms/WhiteSection';
 import SkillsCard from 'Components/molecules/SkillsCard';
