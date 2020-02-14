@@ -1,11 +1,11 @@
 import PostsPage from './Components/pages/Posts';
 import CreatePostForm from './Components/molecules/CreatePostForm';
-
+import HomePage from './Components/pages/HomePage';
 export const routes = [
   {
     text: 'App',
     path: '/',
-    component: () => 'hello there',
+    component: HomePage, 
     displayOnMenu: false
   },
   {

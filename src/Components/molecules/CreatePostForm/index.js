@@ -27,6 +27,7 @@ const StyledForm = styled.form`
 
 const StyledInput = styled.input``;
 
+
 const StyledTextArea = styled.textarea``;
 
 const CreatePostForm = () => {
@@ -68,6 +69,14 @@ const CreatePostForm = () => {
           }}
         />
         <button type="submit">Submit</button>
+      </StyledForm>
+      <StyledForm
+        onSubmit={e => {
+          e.preventDefault();
+        }}
+      >
+        <input type="file" accept=".md" />
+        <input type="submit" value="upload file" />
       </StyledForm>
     </FormWrapper>
   );

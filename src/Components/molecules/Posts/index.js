@@ -1,6 +1,7 @@
 import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { gql } from 'apollo-boost';
+import Markdown from 'markdown-to-jsx';
 
 import Loader from 'Components/atoms/Loader';
 
@@ -23,9 +24,9 @@ const Posts = () => {
     return (
       post.published && (
         <div key={post.id}>
-          <span>{post.title}</span>
+          <div>{post.title}</div>
           <br />
-          <span>{post.body}</span>
+          <Markdown>{post.body}</Markdown>
           <br />
         </div>
       )

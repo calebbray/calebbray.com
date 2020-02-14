@@ -1,29 +1,23 @@
 import React from 'react';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from '@apollo/react-hooks';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
-import GlobalHeader from 'Components/atoms/GlobalHeader';
-import { routes } from 'routes';
+import About from 'Components/pages/About';
+import Banner from 'Components/molecules/Banner';
+import SiteLinks from 'Components/molecules/SiteLinks';
+import ScrollToTop from 'Components/atoms/ScrollToTop';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:4000/graphql'
+  uri: 'http://localhost:5000/graphql'
 });
 
 const App = () => {
   return (
     <ApolloProvider client={client}>
-      <Router>
-        <GlobalHeader />
-        <Switch>
-          {routes.map(
-            (route, i) =>
-              route.component && (
-                <Route key={i} path={route.path} exact component={route.component} />
-              )
-          )}
-        </Switch>
-      </Router>
+      <ScrollToTop />
+      <SiteLinks />
+      <Banner />
+      <About />
     </ApolloProvider>
   );
 };

@@ -6,7 +6,7 @@ import { routes } from 'routes';
 
 const StyledDiv = styled.div`
   height: 4.5rem;
-  background: #204354;
+  background: #002145;
   display: flex;
   align-items: center;
   justify-content: space-between;
