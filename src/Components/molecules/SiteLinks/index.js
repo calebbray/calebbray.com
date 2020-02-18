@@ -20,7 +20,6 @@ const StyledList = styled.ol`
 `;
 const StyledListItem = styled.li`
   font-size: 1.2rem;
-  position: relative;
 `;
 
 const SiteLinks = () => {
