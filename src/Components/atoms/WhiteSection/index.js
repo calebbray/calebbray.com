@@ -16,8 +16,8 @@ const Margins = styled.div`
   margin: auto;
 `;
 
-const WhiteSection = ({ children }) => (
-  <StyledSection>
+const WhiteSection = ({ children, id }) => (
+  <StyledSection id={id}>
     <Margins>{children}</Margins>
   </StyledSection>
 );

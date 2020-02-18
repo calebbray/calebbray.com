@@ -34,8 +34,8 @@ const Text = styled.p`
 
 const About = () => {
   return (
-    <WhiteSection>
-      <TextSection id="about">
+    <WhiteSection id="about">
+      <TextSection>
         <StyledH2>About Me</StyledH2>
         <Text>
           I am a Software Engineer at Emsi, a data company in Moscow, ID.
