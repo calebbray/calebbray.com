@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const NavWrapper = styled.nav`
@@ -32,7 +33,9 @@ const SiteLinks = () => {
       visible={isVisible}
     >
       <StyledList>
-        <StyledListItem>Test Link</StyledListItem>
+        <StyledListItem>
+          <a href="#about">Test Link</a>
+        </StyledListItem>
         <StyledListItem>Test Link</StyledListItem>
         <StyledListItem>Test Link</StyledListItem>
       </StyledList>
