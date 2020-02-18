@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Link from 'Components/atoms/Link';
 import WhiteSection from 'Components/atoms/WhiteSection';
 import SkillsCard from 'Components/molecules/SkillsCard';
 const skillData = [
@@ -40,10 +41,12 @@ const About = () => {
         <Text>
           I am a Software Engineer at Emsi, a data company in Moscow, ID.
           <br />I graduated from the{' '}
-          <a href="https://business.wsu.edu/">Carson College of Business</a> at Washington State
-          University in the fall of 2017. It wasn't until graduating that I realized i wanted to
-          pursue a career is Software Development. Since then, I have dedicated myself to learning
-          as much as I possibly can.
+          <Link href="https://business.wsu.edu/" linkColor="#cc1910">
+            Carson College of Business
+          </Link>{' '}
+          at Washington State University in the fall of 2017. It wasn't until graduating that I
+          realized i wanted to pursue a career is Software Development. Since then, I have dedicated
+          myself to learning as much as I possibly can.
         </Text>
         <Text>Check out some of the things I've dug into...</Text>
       </TextSection>
