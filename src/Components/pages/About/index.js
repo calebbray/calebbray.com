@@ -31,6 +31,9 @@ const StyledH2 = styled.h2`
 
 const Text = styled.p`
   font-size: 1.6rem;
+  & > a {
+    font-size: 1.6rem;
+  }
 `;
 
 const About = () => {

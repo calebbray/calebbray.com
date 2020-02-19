@@ -2,24 +2,29 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 
 import Link from 'Components/atoms/Link';
-import { white } from 'helpers/colors';
+import { white, deepBlue } from 'helpers/colors';
 
 const NavWrapper = styled.nav`
-  width: 50%;
+  width: 100%;
   position: fixed;
-  left: 45%;
   top: ${props => (props.visible ? '0' : '-5rem')};
   transition: top 0.6s;
+  background: ${deepBlue};
 `;
+
 const StyledList = styled.ol`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   margin: 0;
-  padding: 1rem;
+  padding: 1.5rem 2rem;
   color: #ffffff;
 `;
 const StyledListItem = styled.li`
   font-size: 1.2rem;
+
+  &:not(:last-of-type) {
+    margin-right: 10rem;
+  }
 `;
 
 const SiteLinks = () => {
@@ -41,8 +46,10 @@ const SiteLinks = () => {
             About
           </Link>
         </StyledListItem>
-        {/* <StyledListItem>Test Link</StyledListItem>
-        <StyledListItem>Test Link</StyledListItem>*/}
+        {/*<StyledListItem>
+            <Link>Test Link</Link>
+          </StyledListItem>
+           <StyledListItem>Test Link</StyledListItem>*/}
       </StyledList>
     </NavWrapper>
   );
