@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
+import Link from 'Components/atoms/Link';
+import { white } from 'helpers/colors';
+
 const NavWrapper = styled.nav`
   width: 50%;
   position: fixed;
@@ -18,6 +21,7 @@ const StyledList = styled.ol`
 const StyledListItem = styled.li`
   font-size: 1.2rem;
 `;
+
 const SiteLinks = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
   const [isVisible, setIsVisible] = useState(true);
@@ -32,9 +36,13 @@ const SiteLinks = () => {
       visible={isVisible}
     >
       <StyledList>
-        <StyledListItem>Test Link</StyledListItem>
-        <StyledListItem>Test Link</StyledListItem>
-        <StyledListItem>Test Link</StyledListItem>
+        <StyledListItem>
+          <Link href="#about" linkColor={white}>
+            About
+          </Link>
+        </StyledListItem>
+        {/* <StyledListItem>Test Link</StyledListItem>
+        <StyledListItem>Test Link</StyledListItem>*/}
       </StyledList>
     </NavWrapper>
   );
