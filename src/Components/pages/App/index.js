@@ -12,6 +12,9 @@ const client = new ApolloClient({
 });
 
 const App = () => {
+  fetch(`${process.env.REACT_APP_CALEB_API_URL}/skills`)
+    .then(res => res.json())
+    .then(json => console.log(json));
   return (
     <ApolloProvider client={client}>
       <ScrollToTop />
