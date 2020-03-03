@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { white } from 'helpers/colors';
 
 const Link = styled.a`
   color: ${props => props.linkColor};
