@@ -54,7 +54,7 @@ const SkillCard = ({ skill }) => {
         <SkillName>{skill.attributes.name}</SkillName>
       </StyledCard>
       <SkillDetails isOpen={isOpen}>
-        <span>{String(skill.attributes.level / 100)}</span>
+        <span>{String(skill.attributes.rating / 100)}</span>
         <span>{skill.attributes.description}</span>
       </SkillDetails>
     </CardWrapper>
