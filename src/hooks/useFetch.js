@@ -1,7 +1,8 @@
 import { useEffect, useState } from 'react';
-
+import config from 'config';
 const useFetch = (url, options) => {
-  let [response, setResponse] = useState(null);
+  url = url.startsWith('/') ? `${config.calebApi}${url}` : url;
+  let [data, setData] = useState(null);
   let [error, setError] = useState(null);
   let [isLoading, setIsLoading] = useState(null);
   useEffect(() => {
@@ -10,7 +11,7 @@ const useFetch = (url, options) => {
       try {
         const res = await fetch(url, options);
         const json = await res.json();
-        setResponse(json);
+        setData(json.data);
       } catch (error) {
         setError(error);
       }
@@ -18,7 +19,7 @@ const useFetch = (url, options) => {
     };
     consumeService();
   }, [options, url]);
-  return { response, error, isLoading };
+  return { data, error, isLoading };
 };
 
 export default useFetch;

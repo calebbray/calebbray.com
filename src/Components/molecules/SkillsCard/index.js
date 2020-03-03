@@ -51,11 +51,11 @@ const SkillCard = ({ skill }) => {
   return (
     <CardWrapper>
       <StyledCard onClick={() => setIsOpen(!isOpen)} isOpen={isOpen}>
-        <SkillName>{skill.name}</SkillName>
+        <SkillName>{skill.attributes.name}</SkillName>
       </StyledCard>
       <SkillDetails isOpen={isOpen}>
-        <span>{skill.level / 100}</span>
-        <span>{skill.description}</span>
+        <span>{String(skill.attributes.level / 100)}</span>
+        <span>{skill.attributes.description}</span>
       </SkillDetails>
     </CardWrapper>
   );
