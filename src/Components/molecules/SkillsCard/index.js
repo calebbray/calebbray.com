@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Card from 'Components/atoms/Card';
+import Link from 'Components/atoms/Link';
 import { deepBlue, white } from 'helpers/colors';
 
 const StyledCard = styled(Card)`
@@ -34,7 +35,7 @@ const CardWrapper = styled.div`
 const SkillDetails = styled.div`
   display: flex;
   flex-direction: column;
-  height: ${props => (props.isOpen ? '5rem' : '0')};
+  height: ${props => (props.isOpen ? 'auto' : '0')};
   overflow: hidden;
   transition: height 0.3s ease-in-out;
   position: absolute;
@@ -46,6 +47,16 @@ const SkillDetails = styled.div`
   z-index: 1;
   border-radius: 0 0 0.5rem 0.5rem;
 `;
+
+const StyledHr = styled.hr`
+  width: 100%;
+`;
+
+const StyledLink = styled(Link)`
+  margin: 0.5rem;
+  padding: 0.2rem;
+`;
+
 const SkillCard = ({ skill }) => {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -56,6 +67,17 @@ const SkillCard = ({ skill }) => {
       <SkillDetails isOpen={isOpen}>
         <span>{String(skill.attributes.rating / 100)}</span>
         <span>{skill.attributes.description}</span>
+
+        {skill.attributes.examples && (
+          <>
+            <StyledHr />
+            {skill.attributes.examples.map(example => (
+              <StyledLink key={example.link} linkColor="#000000" href={example.link}>
+                {example.title}
+              </StyledLink>
+            ))}
+          </>
+        )}
       </SkillDetails>
     </CardWrapper>
   );
