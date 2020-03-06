@@ -2,12 +2,9 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Card from 'Components/atoms/Card';
 import Link from 'Components/atoms/Link';
-// import { deepBlue, white } from 'helpers/colors';
 
 const StyledCard = styled(Card)`
   width: 26rem;
-  margin-right: 0.6rem;
-  margin-bottom: 0.4rem;
   flex-wrap: wrap;
   border-radius: ${props => (props.isOpen ? '5px 5px 0 0' : '5px')};
 `;
@@ -36,7 +33,7 @@ const BackgroundImage = styled.div`
   display: flex;
   align-items: flex-end;
   color: #ffffff;
-  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(26, 44, 60, 0.5)),
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5), rgba(26, 44, 60, 0.5)),
     url(${props => props.backgroundUrl});
   height: 10rem;
   border-radius: 5px 5px 0 0;
