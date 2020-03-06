@@ -13,6 +13,7 @@ const StyledSection = styled.section`
 
 const Margins = styled.div`
   width: 80%;
+  max-width: 100rem;
   margin: auto;
 `;
 
