@@ -6,7 +6,7 @@ import Link from 'Components/atoms/Link';
 const StyledCard = styled(Card)`
   width: 26rem;
   flex-wrap: wrap;
-  border-radius: ${props => (props.isOpen ? '5px 5px 0 0' : '5px')};
+  margin-bottom: 2rem;
 `;
 
 const SkillName = styled.h3`
