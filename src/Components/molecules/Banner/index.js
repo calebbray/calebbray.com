@@ -12,7 +12,7 @@ const StyledDiv = styled.div`
 `;
 
 const HiMyNameIs = styled.h2`
-  color: #ffffff
+  color: #ffffff;
   font-size: 10rem;
   margin: 0;
   letter-spacing: 0.5rem;

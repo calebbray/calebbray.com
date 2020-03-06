@@ -7,6 +7,7 @@ import Skills from 'Components/molecules/Skills';
 const SkillsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 `;
 const TextSection = styled.div`
   text-align: center;

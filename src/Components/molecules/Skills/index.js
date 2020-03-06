@@ -21,9 +21,12 @@ const Skills = () => {
       )}
       {error && <p>There was an error loading skills</p>}
       {data &&
-        data.map(skill => {
-          return <SkillsCard skill={skill} key={skill.attributes._id} />;
-        })}
+        data
+          .sort((a, b) => (a.attributes.rating < b.attributes.rating ? 1 : -1))
+          .slice(0, 6)
+          .map(skill => {
+            return <SkillsCard skill={skill} key={skill.attributes._id} />;
+          })}
     </>
   );
 };
