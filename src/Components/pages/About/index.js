@@ -2,22 +2,12 @@ import React from 'react';
 import styled from 'styled-components';
 import Link from 'Components/atoms/Link';
 import WhiteSection from 'Components/atoms/WhiteSection';
-import SkillsCard from 'Components/molecules/SkillsCard';
-const skillData = [
-  {
-    id: 1,
-    name: 'javascript',
-    level: 100,
-    description: 'I code in javascript everyday'
-  },
-  { id: 2, name: 'Node.js', level: 100, description: 'I code in javascript everyday' },
-  { id: 3, name: 'React.js', level: 100, description: 'I code in javascript everyday' },
-  { id: 4, name: 'CSS', level: 50, description: 'CSS is confusing' }
-];
+import Skills from 'Components/molecules/Skills';
 
 const SkillsWrapper = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 `;
 const TextSection = styled.div`
   text-align: center;
@@ -54,9 +44,7 @@ const About = () => {
         <Text>Check out some of the things I've dug into...</Text>
       </TextSection>
       <SkillsWrapper>
-        {skillData.map(skill => (
-          <SkillsCard skill={skill} key={skill.id} />
-        ))}
+        <Skills />
       </SkillsWrapper>
     </WhiteSection>
   );
